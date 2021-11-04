@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using HelloWorld.Controllers;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 
 namespace HelloWorld.Middleware
 {
