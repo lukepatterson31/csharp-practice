@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -16,7 +15,7 @@ namespace HelloWorld.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private int slaMs = 5000;
+        private int slaMs = 3000;
         
         private static readonly string[] Summaries = new[]
         {
@@ -35,11 +34,13 @@ namespace HelloWorld.Controllers
         public async Task<IEnumerable<WeatherForecast>> Get(CancellationToken cancellationToken)
         {
             Ping p1 = new Ping();
-            List<string> listIPAdresses = new List<string> {"facebook.com", "amazon.com", "apple.com", "google.com"};
+            Ping p2 = new Ping()
+            List<Ping> pingRequests = new List<Ping> {,,,,,};
+            List<string> listIpAdresses = new List<string> {"facebook.com", "amazon.com", "apple.com", "google.com"};
             
             
             Stopwatch timer = new Stopwatch();
-            Console.WriteLine($"** Timer started");
+            _logger.LogInformation("** Timer started");
             timer.Start();
 
 
@@ -49,28 +50,35 @@ namespace HelloWorld.Controllers
 
             using var cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, selfCancellingCancellationTokenSource.Token);
             
-            Console.WriteLine("** Processing...");
-            
-            
-            // await Task.Delay(2000);
-
+            _logger.LogInformation("** Processing...");
 
             if (!cancellationTokenSource.Token.IsCancellationRequested)
             {
-                Console.WriteLine("** Starting request...");
+                _logger.LogInformation("** Starting request...");
                 
-                foreach (string ipAdress in listIPAdresses)
+                foreach (string ip in listIpAdresses)
                 {
+                    p1 = new Ping();
                     if (timer.Elapsed.Milliseconds < 50)
                     {
-                        var ping = p1.SendPingAsync( ipAdress, 5000);
-                        var pingReply = ping.GetAwaiter().GetResult();
-                        Console.WriteLine($"--Ping results after {timer.Elapsed.TotalMilliseconds} ms-- \nIP pinged: {pingReply.Address} \nStatus: {pingReply.Status} \nRoundtrip time: {pingReply.RoundtripTime}");
+                        Task<PingReply> sendPing = p1.SendAsync(ip, 1000); // use our cancellation token
+                        PingReply sentPingReply = sendPing.GetAwaiter().GetResult(); // if we want to await async operations use await keyword
+                        IPAddress pingedIpAddress = sentPingReply.Address;
+                        IPStatus pingedIpStatus = sentPingReply.Status;
+                        long pingedIpRoundtripTime = sentPingReply.RoundtripTime;
+
+                    
+                        _logger.LogInformation(
+                            "--Ping results after {TimerMillisecondsElapsed} ms-- \n" +
+                            "IP pinged: {PingedIpAddress} \n" +
+                            "Status: {PingedIpStatus} \n" +
+                            "Roundtrip time: {PingedIpRoundtripTime}"
+                            ,timer.Elapsed.TotalMilliseconds ,pingedIpAddress, pingedIpStatus,pingedIpRoundtripTime);
                     }
 
                     else
                     {
-                        Console.WriteLine($"--Cancelled after {timer.Elapsed.TotalMilliseconds} ms--");
+                        _logger.LogError("--Cancelled after {TimerMillisecondsElapsed} ms--", timer.Elapsed.TotalMilliseconds);
                         cancellationTokenSource.Cancel();
                     }
                     
@@ -89,10 +97,11 @@ namespace HelloWorld.Controllers
             }
             else
             {
-                Console.WriteLine("** Request Cancelled");    
+                _logger.LogWarning("** Request Cancelled");    
             }
             
-            Console.WriteLine($"** Finished in: {timer.Elapsed.TotalMilliseconds} ms");
+            _logger.LogInformation("** Finished in: {TimerMillisecondsElapsed} ms", timer.Elapsed.TotalMilliseconds);
+            timer.Stop();
             return await Task.FromResult(result);
         }
     }
