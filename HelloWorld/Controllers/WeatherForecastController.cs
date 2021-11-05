@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Net;
-using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -33,9 +31,6 @@ namespace HelloWorld.Controllers
         [HttpGet]
         public async Task<IEnumerable<WeatherForecast>> Get(CancellationToken cancellationToken)
         {
-            Pingv2 p1 = new Pingv2();
-            List<string> listIpAdresses = new List<string> {"https://www.facebook.com", "https://www.amazon.com", "https://www.apple.com", "https://www.google.com"};
-            
             
             Stopwatch timer = new Stopwatch();
             _logger.LogInformation("** Timer started");
