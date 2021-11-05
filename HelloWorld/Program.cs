@@ -17,17 +17,7 @@ namespace HelloWorld
         private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>())
-                .ConfigureLogging(loggingBuilder =>
-                            loggingBuilder.AddJsonConsole(options =>
-                            {
-                                options.IncludeScopes = false;
-                                options.TimestampFormat = "hh:mm:ss:fff";
-                                options.JsonWriterOptions = new JsonWriterOptions
-                                {
-                                    Indented = true
-                                };
-
-                            }));
+                ;
                 
     }
 }
