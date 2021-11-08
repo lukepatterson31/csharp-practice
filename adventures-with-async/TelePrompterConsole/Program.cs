@@ -9,10 +9,10 @@ namespace TeleprompterConsole
     {
         static async Task Main()
         {
-            await ShowTeleprompter();
+            await RunTelePrompter();
         }
 
-        private static async Task ShowTeleprompter()
+        private static async Task ShowTeleprompter(TelePrompterConfig config)
         {
             var words = ReadFrom("sampleQuotes.txt");
             foreach (var word in words)
@@ -20,14 +20,13 @@ namespace TeleprompterConsole
                 Console.WriteLine(word);
                 if (!string.IsNullOrWhiteSpace(word))
                 {
-                    await Task.Delay(200);
+                    await Task.Delay(config.DelayInMilliseconds);
                 }
             }
         }
 
-        private static async Task Getinput()
+        private static async Task GetInput(TelePrompterConfig config)
         {
-            var delay = 200;
             Action work = () =>
             {
                 do
@@ -35,22 +34,32 @@ namespace TeleprompterConsole
                     var key = Console.ReadKey(true);
                     if (key.KeyChar == '>')
                     {
-                        delay -= 10;
+                        config.UpdateDelay(-10);
                     }
                     else if (key.KeyChar == '<')
                     {
-                        delay += 10;
-                    }
+                        config.UpdateDelay(10);                    }
                     else if (key.KeyChar is 'X' or 'x')
                     {
                         break;
                     }
 
 
-                } while (true);
+                } while (!config.Done);
 
             };
             await Task.Run(work);
+        }
+
+        private static async Task RunTelePrompter()
+        {
+            var config = new TelePrompterConfig();
+            var displayTask = ShowTeleprompter(config);
+
+            var speedTask = GetInput(config);
+            await Task.WhenAny(displayTask, speedTask);
+
+
         }
         
         static  IEnumerable<string> ReadFrom(string file)
