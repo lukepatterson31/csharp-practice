@@ -74,6 +74,7 @@ namespace TeleprompterConsole
                 foreach (var word in words)
                 {
                     yield return word + ' ';
+                    lineLength += word.Length + 1;
                     if (lineLength > 70)
                     {
                         yield return Environment.NewLine;
