@@ -1,0 +1,16 @@
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.exe
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.deps.json
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.runtimeconfig.json
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.runtimeconfig.dev.json
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.dll
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\ref\adventures-with-async.dll
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\bin\Debug\net5.0\adventures-with-async.pdb
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.csproj.AssemblyReference.cache
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.AssemblyInfoInputs.cache
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.AssemblyInfo.cs
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.csproj.CoreCompileInputs.cache
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.dll
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\ref\adventures-with-async.dll
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.pdb
+C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\obj\Debug\net5.0\adventures-with-async.genruntimeconfig.cache

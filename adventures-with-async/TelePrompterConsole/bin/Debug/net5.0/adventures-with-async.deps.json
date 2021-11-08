@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "adventures-with-async/1.0.0": {
+        "runtime": {
+          "adventures-with-async.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "adventures-with-async/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
