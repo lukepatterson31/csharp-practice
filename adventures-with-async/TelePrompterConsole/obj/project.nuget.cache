@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ch6omqDMuOpnjCjwptoGlUs0xP3oHOFj/LPzmYOYJemE9de+kh+u0ZNYs+pFA5GMcCGMNlDDnHFWB9qLSzW5XQ==",
+  "dgSpecHash": "nqUSmzMHVJPYdw3+8itwxWRl3goOR/cc8sNdSv4oV9WlFSYRLlvu39fUjcK3u/0MMwcpSTmOKw8rO5kHC3gN/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
+  "projectFilePath": "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

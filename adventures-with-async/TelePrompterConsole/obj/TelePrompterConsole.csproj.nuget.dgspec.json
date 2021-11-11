@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj": {}
+    "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj": {
+    "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
+        "projectUniqueName": "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
         "projectName": "TelePrompterConsole",
-        "projectPath": "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
+        "projectPath": "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\TelePrompterConsole.csproj",
         "packagesPath": "C:\\Users\\pattro01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pattro01\\code\\bootcamp\\csharp\\web-apis\\adventures-with-async\\TelePrompterConsole\\obj\\",
+        "outputPath": "C:\\Users\\pattro01\\code\\csharp\\csharp-practice\\adventures-with-async\\TelePrompterConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pattro01\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://eateam.pkgs.visualstudio.com/_packaging/Emailage/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

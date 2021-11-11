@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = TelePrompterConsole
-build_property.ProjectDir = C:\Users\pattro01\code\bootcamp\csharp\web-apis\adventures-with-async\TelePrompterConsole\
+build_property.ProjectDir = C:\Users\pattro01\code\csharp\csharp-practice\adventures-with-async\TelePrompterConsole\
